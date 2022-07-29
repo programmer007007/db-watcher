@@ -1,0 +1,25 @@
+{
+    "name": "strongbond/db-watcher",
+    "version": "1.0.0",
+    "description": "Using this we can log all the changes happening at the table level.",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Andrew\\StrongBondDBWatcher\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Prince Johnson",
+            "email": "andprogrammer007@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Andrew\\StrongBondDBWatcher\\DBWatcherServiceProvider"
+            ]
+        }
+    }
+}
