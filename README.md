@@ -1,5 +1,7 @@
 # db-watcher
-PHP package to keep tracks of modification that happens on your tables. 
+PHP package to keep tracks of modification that happens on your tables.
+
+##Note: this works based on triggers. So even the modification that are happening directly on table via some ide are also tracked.
 
 
 ## Step 0 : php artisan vendor:publish 
