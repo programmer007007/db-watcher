@@ -5,6 +5,18 @@ PHP package to keep tracks of modification that happens on your tables.
 ## Step 0 : php artisan vendor:publish 
         
         // This step will put the config file [dbwatcher.php] in the config folder.
+        Below is the content in config file
+        return [
+        "db_name" => env("DB_DATABASE"),
+        "tables_to_track" => [
+        ["table" => "supplier_master", "column" => ["supplier_name","qnty"], "track_event" => ["insert", "update","delete]]
+        // table name for which tracking is required, can't be left blank
+        // column key if empty will track all columns 
+        // track_event is optional | track_event is an array of events to track if empty will track all events
+        ],
+        "log_table_name" => 'sb_log',
+        "common_columns_to_ignore" => ["created_at", "updated_at", "deleted_at"]
+        ];
         
 ## Step 1 : Create a new object
         $db_tracker_obj = new DBWatcher();
